@@ -148,7 +148,7 @@ func (f *UplinkFunctions) Process(payload []byte) (map[string]interface{}, bool,
 	return converted, valid, err
 }
 
-var errTimeOutExceeded = errors.New("Code has been running to long")
+var errTimeOutExceeded = errors.New("Code has been running too long")
 
 func runUnsafeCode(vm *otto.Otto, code string, timeOut time.Duration) (value otto.Value, err error) {
 	start := time.Now()
